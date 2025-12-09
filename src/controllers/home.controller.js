@@ -1,11 +1,5 @@
 import {ApiResponse} from "../utils/ApiResponse.js"
-const welcome = (res,req)=>{
-    console.log("test")
-    return res.status(201).json(
-        new ApiResponse(200, createdUser, "User registered Successfully")
-    )
-}
-
-export {
-   welcome 
+export const welcome = (req, res) => {
+    console.log("test");
+    res.status(200).send("Welcome to backend");
 }
