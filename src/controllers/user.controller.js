@@ -73,7 +73,10 @@ const registerUser = asyncHandler(async(req, res) => {
 
 const loginUser = asyncHandler(async(req,res) => {
     const {username,password} = req.body;
+<<<<<<< HEAD
     
+=======
+>>>>>>> b823f4bf17c62bd47ff9a05d080493372531dcc8
     if(!username){
         throw new ApiError(400,"username is a required field")
     }
@@ -81,12 +84,20 @@ const loginUser = asyncHandler(async(req,res) => {
     const user = await User.findOne({
         username:username
     })
+<<<<<<< HEAD
     
+=======
+    console.log("====user",user)
+>>>>>>> b823f4bf17c62bd47ff9a05d080493372531dcc8
     if(!user){
         throw new ApiError(404,"User does not exist")
     }
      const isPasswordValid = await user.isPasswordCorrect(password)
+<<<<<<< HEAD
      
+=======
+     console.log("======isPasswordValid",isPasswordValid)
+>>>>>>> b823f4bf17c62bd47ff9a05d080493372531dcc8
      if(!isPasswordValid){
         throw new ApiError(401,"Invalid credentials")
      }
