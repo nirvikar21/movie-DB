@@ -21,12 +21,7 @@ import userRouter from  './routes/user.route.js'
 
 
 //Routes declaration
-<<<<<<< HEAD
 app.use("/api/v1/",homeRouter)
 app.use("/api/v1/users",userRouter)
 
-=======
-app.use("/api/v1/users",userRouter)
-app.use("/api/v1/",homeRouter)
->>>>>>> b823f4bf17c62bd47ff9a05d080493372531dcc8
 export {app}
